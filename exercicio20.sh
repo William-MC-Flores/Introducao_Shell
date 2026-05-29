@@ -1,0 +1,11 @@
+#!/bin/bash
+# Monitor de internet
+# Verifica se há conexão ao tentar pingar google.com.
+
+ping -c 1 google.com > /dev/null
+
+if [ $? -eq 0 ]; then
+    echo "Internet funcionando"
+else
+    echo "Sem conexão"
+fi
